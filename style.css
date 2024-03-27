@@ -260,7 +260,72 @@ p {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
 }
+/* Add these styles to your existing style.css */
 
+.profile-pics {
+	display: flex;
+	align-items: center;
+  }
+  
+  /* Add these styles to your existing style.css */
+
+/* Add these styles to your existing style.css */
+
+/* Add these styles to your existing style.css */
+
+.AD.container {
+	display: flex;
+	justify-content: space-between; /* Spread the content horizontally */
+	align-items: right; /* Align items vertically */
+  }
+  
+  .profile-pics {
+	display: flex;
+	align-items: right;
+	justify-content: flex-end; /* Align to the right */
+  }
+  #AD .profile-pics.about-img {
+	height: 100%;
+	width: 120%;
+	position: relative;
+  }
+  
+  .profile-pics img {
+	border-radius: 50%;
+	animation: blink 3s infinite; 
+	width: 100%; /* Adjust size of the profile pictures in percentage */
+	max-width: 300px; /* Set a maximum width */
+	height: auto; /* Automatically calculate height to maintain aspect ratio */
+	position:absolute;
+	margin-right: 4%; /* Adjust spacing between the pictures in percentage */
+  }
+  
+  .profile-pics img:first-child {
+	margin-left: 0; /* No margin for the first picture */
+  }
+ 
+  .profile-pics img:nth-child(2) {
+	animation-delay: 1s; /* Delay for the second image */
+  }
+  
+  .profile-pics img:nth-child(3) {
+	animation-delay: 2s; /* Delay for the third image */
+  }
+  
+  /* Add more nth-child selectors and adjust delays as needed */
+  
+  @keyframes blink {
+	0%, 100% {
+	  opacity: 1;
+	}
+	50% {
+	  opacity: 0;
+	}
+  }
+  
+  
+
+  
 /* End AD Section */
 
 /* Services Section */
