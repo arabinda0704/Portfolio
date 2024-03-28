@@ -38,10 +38,12 @@
     document.addEventListener('DOMContentLoaded', function () {
         const hamburger = document.querySelector('.hamburger');
         const navList = document.querySelector('.nav-list ul');
+        const line = document.querySelector('.line'); // Add this line
 
         hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active');
             navList.classList.toggle('active');
+            line.classList.toggle('active'); // Toggle the 'active' class for the line element
         });
 
         // Smooth scrolling
@@ -62,6 +64,13 @@
                         top: targetPosition,
                         behavior: 'smooth'
                     });
+
+                    // Close navigation menu after clicking a link on mobile
+                    if (navList.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        navList.classList.remove('active');
+                        line.classList.remove('active'); // Remove 'active' class from line element
+                    }
                 }
             });
         });
@@ -395,7 +404,7 @@
           <a href="https://github.com/arabinda0704" target="blank"><img src="github.png" /></a>
         </div>
         <div class="social-item">
-          <a href="https://www.facebook.com/profile.php?id=100009205487883" target="blank"><img
+          <a href="https://www.facebook.com/profile.php?id=100009205487883&sk=about" target="blank"><img
               src="facebook.png" /></a>
         </div>
       </div>
@@ -403,7 +412,7 @@
     </div>
   </section>
   <!-- End Footer -->
-  <script src="./app.js"></script>
+  <!-- <script src="./app.js"></script> -->
 </body>
 
 </html>

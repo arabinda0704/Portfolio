@@ -294,7 +294,7 @@ p {
 	border-radius: 50%;
 	animation: blink 3s infinite; 
 	width: 100%; /* Adjust size of the profile pictures in percentage */
-	max-width: 300px; /* Set a maximum width */
+	max-width: 50%; /* Set a maximum width */
 	height: auto; /* Automatically calculate height to maintain aspect ratio */
 	position:absolute;
 	margin-right: 4%; /* Adjust spacing between the pictures in percentage */
