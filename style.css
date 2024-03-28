@@ -309,7 +309,7 @@ p {
   }
   
   .profile-pics img:nth-child(3) {
-	animation-delay: 2s; /* Delay for the third image */
+	animation-delay: s; /* Delay for the third image */
   }
   
   /* Add more nth-child selectors and adjust delays as needed */

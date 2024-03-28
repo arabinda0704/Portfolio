@@ -34,7 +34,39 @@
     </div>
   </section>
   <!-- End Header -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list ul');
 
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        const navLinks = document.querySelectorAll('.nav-list ul a');
+
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                const headerHeight = document.querySelector('#header').offsetHeight;
+
+                if (targetSection) {
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
 
   <!-- AD Section  -->
   <section id="AD">
@@ -45,11 +77,13 @@
         <h1>Arabinda Das <span></span></h1>
         <a href="#services" type="button" class="cta">Portfolio</a>
       </div>
-      <!-- <div class="profile-pics about-img">
-        <img src="./linkedin_pic.png" alt="Profile Picture" class="blink-circle">
-        <img src="./Maidan.jpg" alt="Other Picture 2" class="blink-circle"> 
+    
+      <div class="profile-pics about-img">
+        <img src="./linkedin_pic.png" alt="Other Picture 2" class="blink-circle">
+        <img src="./Maidan.jpg" alt="Profile Picture" class="blink-circle"> 
         
-      </div> -->
+      </div>
+   
     </div>
   </section>
   <!-- End Section  -->
@@ -221,7 +255,7 @@
           <div class="service-item">
             <div class="icon"><img src="cer.png" /></div>
             <h2>Machine Learning with Python</h2>
-            <p>by IBM|
+            <p>by IBM |
               Coursera
             </p>
             <p><a style="text-decoration: none"
